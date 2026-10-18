@@ -1,9 +1,13 @@
 Git
+    git init: para criar um novo projeto.
     git clone URL_DO_REPOSITORIO
-    git status
+    git status: Para ver o resumo de o que foi editado, adicionado, etc.
+    git add: Para começar a acompanhar novos aruivos e registrar mudanças
+    git add .: Para executar git add no projeto inteiro
     git push: Dá upload
     git push <nome_remoto> <nome_branch>
     git pull: Dá Download
+    git restore --staged <file>... to unstage
 
 Debug do Flask é assim:
     #app.run(debug=True)
@@ -81,3 +85,6 @@ Debug do Flask é assim:
     #INSERT INTO NOME(05, RAFAELA);
     #UPDATE SET NOME = RAFA WHERE NOME = RAFAELA
 
+
+#Venv e versionamento
+    Um ambiente virtual Python contém interpretadores, bibliotecas instaladas e outros arquivos específicos do ambiente. Em geral, não é necessário versioná-lo. Nesse projeto, nós vamos :D
