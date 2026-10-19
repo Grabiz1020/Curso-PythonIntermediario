@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ % block title %}livraria{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- As a link -->
+<nav class="navbar bg-1 fg-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'app1:lista' %}">Navbar</a>
+    </div>
+  </nav>
+  
+  <!-- As a heading -->
+  <nav class="navbar bg-1 fg-2">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Navbar</span>
+    </div>
+  </nav>
+</button>
+</body>
+</html>

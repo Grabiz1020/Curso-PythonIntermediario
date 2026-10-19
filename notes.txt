@@ -87,11 +87,14 @@ Códigos de SQL de exemplo :
     INSERT INTO NOME(05, RAFAELA);
     UPDATE SET NOME = RAFA WHERE NOME = RAFAELA
 
-
-python manage.py makemigrations : Registra e prepara paras as mudanças de database
-python manage.py migrate : Aplica as mudanças de Database
-python manage.py createsuperuser : Seve para criar uma conta admin
+Outros comandos manage.py
+    python manage.py makemigrations : Registra e prepara paras as mudanças de database
+    python manage.py migrate : Aplica as mudanças de Database
+    python manage.py createsuperuser : Seve para criar uma conta admin
 
 slug = ID único definido nos models (interpreto como um id)
-Nós mudamos o arquivo views.py para criarmos funções que definem as telas
-Nós criamos o arquivo urls.py para criarmos o endereços url para cada função do views.py 
+
+Aula 19/10 - Registro
+    Nós mudamos o arquivo views.py para criarmos funções que definem as telas
+    Nós criamos o arquivo urls.py dentro do app para criarmos o endereços url para cada função do views.py
+    Criamos um arquivo html
