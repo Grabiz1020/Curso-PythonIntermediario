@@ -13,6 +13,8 @@ Debug do Flask é assim:
     #app.run(debug=True)
     #Veja HTTP Status Code
 
+
+cd Curso-PythonIntermediario
 #cd .. (voltar)
 #cd <pasta> (prosseguir)
 
@@ -85,6 +87,10 @@ Debug do Flask é assim:
     #INSERT INTO NOME(05, RAFAELA);
     #UPDATE SET NOME = RAFA WHERE NOME = RAFAELA
 
+
+python manage.py migrate
+python manage.py makemigrations
+python manage.py createsuperuser : Seve para criar uma conta admin
 
 #Venv e versionamento
     Um ambiente virtual Python contém interpretadores, bibliotecas instaladas e outros arquivos específicos do ambiente. Em geral, não é necessário versioná-lo. Nesse projeto, nós vamos :D
