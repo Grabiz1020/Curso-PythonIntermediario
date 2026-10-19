@@ -2,6 +2,7 @@
 #Recap! Faça um pequeno programa de notas de aluno (Que legal :D)
 #Vou usar esse código para comentar e anotar coisas
 print("Hello guys :)")
+
 #Custom functions & Class Reminders
 def input_number(text):
   while True:
