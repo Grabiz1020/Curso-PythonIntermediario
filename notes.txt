@@ -10,30 +10,30 @@ Git
     git restore --staged <file>... to unstage
 
 Debug do Flask é assim:
-    #app.run(debug=True)
-    #Veja HTTP Status Code
+    app.run(debug=True)
+    Veja HTTP Status Code
 
 
 cd Curso-PythonIntermediario
-#cd .. (voltar)
-#cd <pasta> (prosseguir)
+cd .. (voltar)
+cd <pasta> (prosseguir)
 
-#Ambientes de Desenvolvimento
-    #NOPROD
-        #Dev - Sandbox do dev
-        #QA - Avaliação
-        #HML - Backup
-    #Subir as coisas pra PROD (se der errado, TEM que ter Rollback (backup do PROD))
-    #PROD
-        #O que está disponível para o público (eu acho)
+Ambientes de Desenvolvimento
+    NOPROD
+        Dev - Sandbox do dev
+        QA - Avaliação
+        HML - Backup
+    Subir as coisas pra PROD (se der errado, TEM que ter Rollback (backup do PROD))
+    PROD
+        O que está disponível para o público (eu acho)
 
-#PASSO 1: Código para criar venv:
+PASSO 1: Código para criar venv:
     python -m venv <InsiraNomeAqui>
     Como ativar o venv : O caminho para algum activate
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser (isso tem que rodar no pc)
     /workspaces/Curso-Python-Intermediario/abc/bin/Activate.ps1 ---- (Ou só copiar o relative path do arquivo Activate.ps1)
 
-#PASSO 2: Django
+PASSO 2: Django
     django-admin startproject <nome do site>
     cd <nome da pasta do site>
     python manage.py runserver
@@ -41,18 +41,18 @@ cd Curso-PythonIntermediario
     **IMPORTANTE**
     Temos o projeto <nome do site> e temos apps <nome do app>. São coisas diferentes. Um projeto pode ter vários apps e os apps podem ter cópias em vários projetos
 
-#Pastas
+Pastas
     __init__
-    #N faz nada pra gente. É só pro django reconhecer
+    N faz nada pra gente. É só pro django reconhecer
     Asgi
-    #Serve para o server dar o deploy
+    Serve para o server dar o deploy
     Settings
-    #Autoexplicativo.
+    Autoexplicativo.
     Urls
-    #Autoexplicativo. Pode fazer a roteirização.
-#Models
-    #Serve para setar como vai ser organizado banco de dados por meio de classes ou "Models"
-        #Exemplo de  Model
+    Autoexplicativo. Pode fazer a roteirização.
+Models
+    Serve para setar como vai ser organizado banco de dados por meio de classes ou "Models"
+        Exemplo de  Model
     class book(models.Model):
         index = models.IntegerField("id", max_digits=20)
         class covercolors(models.TextChoices):
@@ -77,20 +77,21 @@ cd Curso-PythonIntermediario
             default=covercolors.BLUE,
         )
 
-#Vizualização e Apps
-    #Para importar um app criado com o manage.py starapp, adicione o nome do app na array INSTALLED_APPS.
-    #Para ativar a visualização em tempo real, coloque isso no settings na array MIDDLEWARE.
-    #django_browser_reload.middleware.Browser
+Vizualização e Apps
+    Para importar um app criado com o manage.py starapp, adicione o nome do app na array INSTALLED_APPS.
+    Para ativar a visualização em tempo real, coloque isso no settings na array MIDDLEWARE.
+    django_browser_reload.middleware.Browser
 
-#Códigos de SQL de exemplo : 
-    #SELECT * FROM NOME WHERE ID IN (03,04);
-    #INSERT INTO NOME(05, RAFAELA);
-    #UPDATE SET NOME = RAFA WHERE NOME = RAFAELA
+Códigos de SQL de exemplo : 
+    SELECT * FROM NOME WHERE ID IN (03,04);
+    INSERT INTO NOME(05, RAFAELA);
+    UPDATE SET NOME = RAFA WHERE NOME = RAFAELA
 
 
-python manage.py migrate
-python manage.py makemigrations
+python manage.py makemigrations : Registra e prepara paras as mudanças de database
+python manage.py migrate : Aplica as mudanças de Database
 python manage.py createsuperuser : Seve para criar uma conta admin
 
-#Venv e versionamento
-    Um ambiente virtual Python contém interpretadores, bibliotecas instaladas e outros arquivos específicos do ambiente. Em geral, não é necessário versioná-lo. Nesse projeto, nós vamos :D
+slug = ID único definido nos models (interpreto como um id)
+Nós mudamos o arquivo views.py para criarmos funções que definem as telas
+Nós criamos o arquivo urls.py para criarmos o endereços url para cada função do views.py 
