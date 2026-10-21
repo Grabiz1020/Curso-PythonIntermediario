@@ -6,8 +6,8 @@ from .models import Livro
 
 def lista_livro(request):
     livros = Livro.objects.all()
-    return render(request, "livraria;lista_livros.html", {"livros": livros})
+    return render(request, "app1/base.html", {"livros": livros})
 
 def comprar_livro(request, slug):
     livro = get_object_or_404(Livro)
-    return render(request, "livraria;lista_livros.html", {"livros": livro})
+    return render(request, "app1/lista_livros.html", {"livros": livro})
