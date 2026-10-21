@@ -9,6 +9,9 @@ Git
     git pull: Dá Download
     git restore --staged <file>... to unstage
 
+admin__
+senha da net
+
 Debug do Flask é assim:
     app.run(debug=True)
     Veja HTTP Status Code
