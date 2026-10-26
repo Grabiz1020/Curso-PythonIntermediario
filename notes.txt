@@ -7,7 +7,7 @@ Git
     git push: Dá upload
     git push <nome_remoto> <nome_branch>
     git pull: Dá Download
-    git restore --staged <file>... to unstage
+    git restore . : Ctrl + z
 
 admin__
 senha da net

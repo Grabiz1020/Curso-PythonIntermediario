@@ -4,6 +4,9 @@ from django.shortcuts import get_object_or_404, render
 from .models import Livro 
 #Isso você faz para pegar o obj livro
 
+def homepage(request):
+    return render(request, "app1/homepage.html")
+
 def lista_livro(request):
     livros = Livro.objects.all()
     return render(request, "app1/lista_livro.html", {"livros": livros})
