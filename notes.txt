@@ -1,4 +1,6 @@
 Git
+    git config user.name 'Your Name'
+    git config --global user.email “[valid-email]”
     git init: para criar um novo projeto.
     git clone URL_DO_REPOSITORIO
     git status: Para ver o resumo de o que foi editado, adicionado, etc.

@@ -13,8 +13,9 @@
                         {% if livro.estilo_capa == 'terracota' %}bg-danger
                         {% elif livro.estilo_capa == 'azul' %}bg-primary
                         {% elif livro.estilo_capa == 'verde' %}bg-success
+                        {% elif livro.estilo_capa == 'roxo' %}bg-accent
                         {% else %}bg-secondary{% endif %}">
-                        <span class="small text-uppercase mb-3">Página de Papel</span>
+                        <span class="small text-uppercase mb-3">Livraria Rasaiva</span>
                         <span class="h3">{{ livro.titulo }}</span>
                         <span>{{ livro.autor }}</span>
         </div>

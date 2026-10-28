@@ -7,6 +7,12 @@ from .models import Livro
 def homepage(request):
     return render(request, "app1/homepage.html")
 
+def quemsomos(request):
+    return render(request, "app1/quem_somos.html")
+
+def devolucao(request):
+    return render(request, "app1/devolucao.html")
+
 def lista_livro(request):
     livros = Livro.objects.all()
     return render(request, "app1/lista_livro.html", {"livros": livros})
