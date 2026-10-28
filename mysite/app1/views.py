@@ -12,5 +12,6 @@ def lista_livro(request):
     return render(request, "app1/lista_livro.html", {"livros": livros})
 
 def comprar_livro(request, slug):
-    livro = get_object_or_404(Livro)
-    return render(request, "app1/lista_livros.html", {"livros": livro})
+    livro = get_object_or_404(Livro, slug=slug)
+    print(livro)
+    return render(request, "app1/comprar_livro.html", {"livro": livro})

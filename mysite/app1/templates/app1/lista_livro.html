@@ -3,7 +3,30 @@
 {% block title %} Livros / Página de Papel {% endblock %}
 
 {% block content %}
+<div class="row g-4">
+    {% for livro in livros %}
+    <section class="card" style="max-width: 320px">
+        {% if livro.imagem_capa_url %}
+        <img src={{ livro.imagem_capa_url }} class="card-img-top" alt="...">
+        {% else %}
+        <div class="d-flex flex-column justify-content-center align-items-center text-center text-white p-4
+                        {% if livro.estilo_capa == 'terracota' %}bg-danger
+                        {% elif livro.estilo_capa == 'azul' %}bg-primary
+                        {% elif livro.estilo_capa == 'verde' %}bg-success
+                        {% else %}bg-secondary{% endif %}">
+                        <span class="small text-uppercase mb-3">Página de Papel</span>
+                        <span class="h3">{{ livro.titulo }}</span>
+                        <span>{{ livro.autor }}</span>
+        </div>
+        {% endif %}
+    <div class="card-body">
+      <h4 class="card-title">{{ livro.titulo }}</h4>
+      <p class="card-text">{{ livro.descricao }}</p>
+      <a href="comprar/{{ livro.slug }}" class="btn-solid theme-primary">Comprar</a>
+    </div>
+  </section>
+  {% endfor %}
+</div>
 
-<h1>Obras em andamento...</h1>
 
 {% endblock %}
