@@ -6,7 +6,7 @@ app_name = "app1"
 #repare que cada views. tem um nome de uma função
 urlpatterns = [
     path("", views.homepage, name="home"),
-    path("lista_livro", views.lista_livro, name="lista"),
+    path("listalivro", views.lista_livro, name="lista"),
     path("comprar/<slug:slug>", views.comprar_livro, name="listaa"),
     path("quemsomos", views.quemsomos, name="home"),
     path("devolucao", views.devolucao, name="home"),
