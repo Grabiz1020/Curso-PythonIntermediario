@@ -3,9 +3,11 @@
 {% block title %} Livros / Página de Papel {% endblock %}
 
 {% block content %}
+<div class="m-12">
+<div class="container">
 <div class="row g-4">
     {% for livro in livros %}
-    <section class="card" style="max-width: 320px">
+    <section class="card col-sm-6 col-lg-4 col-xl-3" style="max-width: 320px">
         {% if livro.imagem_capa_url %}
         <img src={{ livro.imagem_capa_url }} class="card-img-top" alt="...">
         {% else %}
@@ -27,6 +29,8 @@
     </div>
   </section>
   {% endfor %}
+</div>
+</div>
 </div>
 
 

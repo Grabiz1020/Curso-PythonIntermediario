@@ -8,7 +8,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     text = models.TextField()
     class Meta:
-        ordering = ["titulo"]
+        ordering = ["title"]
         verbose_name = "livro"
         verbose_name_plural = "livros"
 
@@ -23,7 +23,7 @@ class Post(models.Model):
         verbose_name_plural = "posts"
 
     def __str__(self):
-        return self.titulo
+        return self.title
 
     def get_absolute_url(self):
         return reverse("reader:read", args=[self.slug])
