@@ -1,11 +1,12 @@
 {% extends "textposts/base.html" %}
 
-{% block title %} Livros / Página de Papel {% endblock %}
+{% block title %} Homepage {% endblock %}
 
 {% block content %}
-
-<h1>
-    Homepage
-</h1>
+<div>
+    {% for myimage in myimages %}
+    <img src="{{ myimage.image.url }}" alt="{{ myimage.title }}">
+    {% endfor %}
+</div>
 
 {% endblock %}
