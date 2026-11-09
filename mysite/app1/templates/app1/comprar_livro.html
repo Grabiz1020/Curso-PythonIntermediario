@@ -5,29 +5,29 @@
 {% block content %}
 
 <section class="container py-5">
-  <a href="{% url 'app1:lista' %}">&larr; voltar ao catalogo</a>
-  <div>
-    <h1>
-      {{ livro.titulo }}
-    </h1>
-    <h3>
-      {{ livro.descricao }}
-    </h3>
-  </div>
-  <div class="row g-5 align-items-center py-4 py-lg-5">
-    {% if livro.imagem_capa_url %}
-    <img class="w-100 h-100 object-fit-contain"
-    src={{ livro.imagem_capa_url }}
-    alt="Capa do {{ livro.titulo }}">
-    {% else %}
-    <div>
-      <h1>
-        Tô com preguiça de botar o treco com cor agora... Vou ver depois :)
-        <img src="https://logos-world.net/wp-content/uploads/2020/10/Roblox-Logo-2018-present.jpg" alt="Roblox">
-      </h1>
+  <div class="m-12">
+    <div class="row">
+      <div class="col-6">
+        <h1>{{ livro.titulo }}</h1>
+        <h5>{{ livro.descricao }}</h5>
+      </div>
+      <div class="col-6">
+        <div class="row g-5 align-items-center py-4 py-lg-5">
+          {% if livro.imagem_capa_url %}
+          <img class="w-100 h-100 object-fit-contain"
+          src={{ livro.imagem_capa_url }}
+          alt="Capa do {{ livro.titulo }}">
+          {% else %}
+          <div>
+            <h1>
+              Tô com preguiça de botar o treco com cor agora... Vou ver depois :)
+              <img src="https://logos-world.net/wp-content/uploads/2020/10/Roblox-Logo-2018-present.jpg" alt="Roblox">
+            </h1>
+          </div>
+          {% endif %}
+        </div>
+      </div>
     </div>
-    {% endif %}
   </div>
-
 </section>
 {% endblock %}
