@@ -103,3 +103,7 @@ Aula 19/10 - Registro
     Nós mudamos o arquivo views.py para criarmos funções que definem as telas
     Nós criamos o arquivo urls.py dentro do app para criarmos o endereços url para cada função do views.py
     Criamos um arquivo html
+
+pip freeze > requirements.txt
+ 
+pip install -r requirements.txt
