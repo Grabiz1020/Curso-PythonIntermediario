@@ -1,0 +1,13 @@
+{% extends "textposts/base.html" %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+<div>
+    {% for myimage in myimages %}
+    <h1 style="text-align: center;">Sobre</h1>
+    <p>Oi! Meu nome é Gabriel.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

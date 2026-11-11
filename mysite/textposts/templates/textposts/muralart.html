@@ -1,0 +1,16 @@
+{% extends "textposts/base.html" %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+<div>
+    {% for myimage in myimages %}
+    <div>
+        <img src="{{ myimage.image.url }}" alt="{{ myimage.title }}">
+        <p>{{ myimage.title }}</p>
+    </div>
+    
+    {% endfor %}
+</div>
+
+{% endblock %}

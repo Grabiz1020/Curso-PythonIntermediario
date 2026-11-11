@@ -1,0 +1,14 @@
+{% extends "textposts/base.html" %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+
+<div>
+    <h1 style="text-align: center;">{{ post.title }}</h1>
+    <h3 style="text-align: center;">{{ post.subtitle }}</h3>
+    <h5 style="text-align: center;">{{ post.date }}</h5>
+    <p>{{ post.text }}</p>
+</div>
+
+{% endblock %}

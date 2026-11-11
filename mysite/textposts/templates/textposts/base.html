@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="{% static 'textposts/style.css' %}">
 </head>
 <body>
-    <header>Header</header>
+    <header>
+        Header
+        <a href='/'>homepage</a>
+    </header>
     <main>{% block content %}{% endblock %}</main>
-    <footer>Footer</footer>
+    <footer>
+        Footer
+        <h5>
+            <a href='/admin'>admin</a>
+        </h5>
+    </footer>
 </body>
 </html>
