@@ -5,10 +5,15 @@
 {% block content %}
 
 <div>
+    <div>
+    <a href='/text'>Retornar ao Mural de Posts</a>
     <h1 style="text-align: center;">{{ post.title }}</h1>
     <h3 style="text-align: center;">{{ post.subtitle }}</h3>
     <h5 style="text-align: center;">{{ post.date }}</h5>
-    <p>{{ post.text }}</p>
+    </div>
+    <div class="post-content">
+    <p>{{ post.text|linebreaks }}</p>
+    </div>
 </div>
 
 {% endblock %}

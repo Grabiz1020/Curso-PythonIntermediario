@@ -20,12 +20,13 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #252525;
+    background-color: #1d1d1d;
     color: white;
 
     padding: 25px;
     text-align: center;
 }
+
 
 /* Conteúdo principal */
 main {
@@ -35,12 +36,25 @@ main {
     max-width: 900px;
 
     margin: 40px auto;
-    padding: 30px;
+    padding: 50px;
 
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post-header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    white-space: wrap;
+}
+
+
+.post-content {
+    white-space: pre-wrap;
+    text-align: justify
 }
 
 /* Rodapé */

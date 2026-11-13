@@ -5,6 +5,7 @@ href="text/{{ livro.slug }}"
 {% block content %}
 <div>
     {% for post in posts %}
+    {% if post.visible %}
     <div>
     <a href="read/{{ post.slug }}">
         <div>
@@ -21,6 +22,7 @@ href="text/{{ livro.slug }}"
         </div>
     </a>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 
