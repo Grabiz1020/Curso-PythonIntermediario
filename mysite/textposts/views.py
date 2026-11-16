@@ -19,5 +19,5 @@ def muralposts(request):
 
 def selectedpost(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    return render(request, "textposts\selectedpost", {"post": post})
+    return render(request, "textposts\selectedpost.html", {"post": post})
 

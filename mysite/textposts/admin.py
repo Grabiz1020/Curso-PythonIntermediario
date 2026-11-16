@@ -4,7 +4,7 @@ from .models import MyImage
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ("title", "subtitle", "date", "text", "visible")
+    list_display = ("title", "subtitle", "date", "image" , "text", "visible")
     search_fields = ("title", "date")
     prepopulated_fields = {"slug": ("title",)}
 

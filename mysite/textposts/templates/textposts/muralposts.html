@@ -1,16 +1,17 @@
 {% extends "textposts/base.html" %}
 
-{% block title %} Homepage {% endblock %}
+{% block title %} Grabiz Gallery - Posts {% endblock %}
 href="text/{{ livro.slug }}"
 {% block content %}
+<h1>Mural Posts</h1>
 <div>
     {% for post in posts %}
     {% if post.visible %}
-    <div>
+    <div class="mycard slideup"  style="--i: {{ forloop.counter0 }}">
     <a href="read/{{ post.slug }}">
         <div>
             {% if post.image %}
-                <img src="{{ post.image }}" alt="{{ post.title }}">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}">
             {% else %}
                 <p>Sem banner</p>
             {% endif %}

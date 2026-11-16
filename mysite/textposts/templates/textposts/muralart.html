@@ -1,14 +1,18 @@
 {% extends "textposts/base.html" %}
 
-{% block title %} Homepage {% endblock %}
+{% block title %} Grabiz Gallery - Art {% endblock %}
 
 {% block content %}
-<div>
+<h1>Gallery</h1>
+<div class="gallery">
+
     {% for myimage in myimages %}
-    <div>
+    <div class="myart slideup"  style="--i: {{ forloop.counter0 }}">
         <img src="{{ myimage.image.url }}" alt="{{ myimage.title }}">
         <p>{{ myimage.title }}</p>
     </div>
+    
+
     
     {% endfor %}
 </div>

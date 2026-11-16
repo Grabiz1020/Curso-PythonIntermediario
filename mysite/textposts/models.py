@@ -8,6 +8,7 @@ class Post(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     text = models.TextField()
     visible = models.BooleanField(default=True)
+    image = models.ImageField(upload_to = 'images/', default='images/banner_placeholder.png')
 
     class Meta:
         ordering = ["-date"] # The "-" is to display the newer one to the oldest one.
