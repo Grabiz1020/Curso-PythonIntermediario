@@ -7,11 +7,12 @@
 <div class="gallery">
 
     {% for myimage in myimages %}
+    <a href="{{ myimage.image.url }}" target="_blank">
     <div class="myart slideup"  style="--i: {{ forloop.counter0 }}">
         <img src="{{ myimage.image.url }}" alt="{{ myimage.title }}">
         <p>{{ myimage.title }}</p>
     </div>
-    
+    </a>
 
     
     {% endfor %}
