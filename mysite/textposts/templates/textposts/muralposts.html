@@ -13,7 +13,7 @@ href="text/{{ livro.slug }}"
             {% if post.image %}
                 <img src="{{ post.image.url }}" alt="{{ post.title }}">
             {% else %}
-                <p>Sem banner</p>
+                <img src="/media/images/textbanners/banner_placeholder.png" alt="{{ post.title }}">
             {% endif %}
         </div>
         <div>

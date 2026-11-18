@@ -7,7 +7,11 @@
 <div>
     <a href='/text'>Retornar ao Mural de Posts</a>
     <div class="post-header">
+        {% if post.image %}
         <img src='{{ post.image.url }}' alt="{{ post.title }}">
+        {% else %}
+        <img src="/media/images/textbanners/banner_placeholder.png" alt="{{ post.title }}">
+        {% endif %}
         <h1 style="text-align: center;">{{ post.title }}</h1>
         <h3 style="text-align: center;">{{ post.subtitle }}</h3>
         <h5 style="text-align: center;">{{ post.date }}</h5>
