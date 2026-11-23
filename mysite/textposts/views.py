@@ -4,7 +4,12 @@ from .models import Post
 #from .models import MUDE AQUI O NOME DO POST 
 
 def homepage(request):
-    return render(request, "textposts/home.html")
+    lastimage = MyImage.objects.first()
+    lastpost = Post.objects.first()
+    return render(request, "textposts/home.html", {
+        'image': lastimage,
+        'post': lastpost
+    })
 
 def information(request):
     return render(request, "textposts/information.html")

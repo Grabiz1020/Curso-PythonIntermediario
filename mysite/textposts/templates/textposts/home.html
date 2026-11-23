@@ -4,10 +4,60 @@
 
 {% block content %}
 <div>
-    <h1 style="text-align: center;">Grabiz Gallery</h1>
-    <a href='/art'>art</a>
-    <a href='/text'>texts</a>
-    <a href='/about'>about</a>
+    <div>
+        <h1 style="text-align: center;">Grabiz Gallery</h1>
+    </div>
+    <div>
+        <a href='/about'>about</a>
+        <a href='/art'>art</a>
+        <a href='/text'>texts</a>
+    </div>
+    <p>
+        Site projetado para ser acessado pelo computador. Conteúdo seguro. Pode ficar de boas.
+        (Perdão aos usuários do mobile)
+    </p>
+
+    <div class="about">
+    {% if image %}
+    <div>
+        <h2>Última Arte</h2>
+        <a href="/art">
+            <div class="slideup" style="padding-top: 10px;">
+                <img src="{{ image.image.url }}" alt="{{ image.title }}" style="height: 200px;">
+                <p>{{ image.title }}</p>
+                <p>{{ image.text }}</p>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+
+    
+    {% if post %}
+    {% if post.visible %}
+    <div>
+    <h2>Último Post</h2>
+    <div class="mycard slideup">
+    <a href="text/read/{{ post.slug }}">
+        <div>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}">
+            {% else %}
+                <img src="/media/images/textbanners/banner_placeholder.png" alt="{{ post.title }}">
+            {% endif %}
+        </div>
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.subtitle }}</p>
+            <span>{{ post.date }}</span>
+        </div>
+    </a>
+    </div>
+    </div>
+    {% endif %}
+    {% endif %}
+    </div>
+    
+    
 </div>
 
 {% endblock %}
