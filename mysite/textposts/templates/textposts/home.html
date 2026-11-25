@@ -4,20 +4,22 @@
 
 {% block content %}
 <div>
-    <div>
-        <h1 style="text-align: center;">Grabiz Gallery</h1>
-    </div>
-    <div>
-        <a href='/about'>about</a>
-        <a href='/art'>art</a>
-        <a href='/text'>texts</a>
-    </div>
-    <p>
-        Site projetado para ser acessado pelo computador. Conteúdo seguro. Pode ficar de boas.
-        (Perdão aos usuários do mobile)
-    </p>
+    <h1 style="text-align: center;">Bem Vindo ao Grabiz Gallery!</h1>
 
-    <div class="about">
+    <div class="pagebar">
+        <a class="button" style="width: 100%;" href='/about'>Sobre Mim</a>
+        <a class="button" style="width: 100%;" href='/art'>Galeria de Imagens</a>
+        <a class="button" style="width: 100%;" href='/text'>Postagens de Texto</a>
+    </div>
+    
+    <p>      
+Olá! Meu nome é Gabriel e esse é um canto para guardar imagens e falar algumas coisas que passam pela minha cabeça.
+Só para constar, o site foi desenvolvido pensando em usuários no PC, tem gifs e imagens pesadinhas e conteúdo livre SFW. Então, sinta-se a vontade!
+Aprecie as imagens, dê uma olhada nos textos e finja que entendeu alguma coisa, aprecie o front-end (tenho certeza que está maravilhoso), mas tenha um bom surfing na web :D!.
+    </p>
+    <img src="/media/images/site_assets/about_profile.jpg" alt=" Banner" style="width: 100%; height: 150px;">
+
+    <div class="dualcolumns">
     {% if image %}
     <div>
         <h2>Última Arte</h2>
@@ -40,15 +42,16 @@
     <a href="text/read/{{ post.slug }}">
         <div>
             {% if post.image %}
-                <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" s>
             {% else %}
                 <img src="/media/images/textbanners/banner_placeholder.png" alt="{{ post.title }}">
             {% endif %}
         </div>
         <div>
             <h2>{{ post.title }}</h2>
-            <p>{{ post.subtitle }}</p>
+            <h3>{{ post.subtitle }}</h3>
             <span>{{ post.date }}</span>
+            <h6>{{ post.text|truncatechars:200 }}</h6>
         </div>
     </a>
     </div>

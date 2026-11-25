@@ -10,8 +10,11 @@
 </head>
 <body>
     <header>
-        Header
-        <a href='/'>homepage</a>
+        <div class="headercontent">
+        <a href='/'>
+            <img src="/media/images/textbanners/banner_placeholder.png" alt="{{ post.title }}" style="height: 75px;">
+        </a>
+        </div>
     </header>
     <main>{% block content %}{% endblock %}</main>
     <footer>
