@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from .models import MyImage
+from .models import MyAudio
 from .models import Post
 #from .models import MUDE AQUI O NOME DO POST 
 
@@ -17,6 +18,10 @@ def information(request):
 def muralart(request):
     myimages = MyImage.objects.all()
     return render(request, "textposts/muralart.html", {"myimages": myimages})
+
+def muralaudio(request):
+    myaudios = MyAudio.objects.all()
+    return render(request, "textposts/muraudio.html", {"myaudios": myaudios})
 
 def muralposts(request):
     posts = Post.objects.all()

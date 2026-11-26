@@ -8,6 +8,7 @@ urlpatterns = [
     path("", views.homepage, name="home"),
     path("about/", views.information, name="about"),
     path("art/", views.muralart, name="art"),
+    path("audio/", views.muralaudio, name="audio"),
     path("text/", views.muralposts, name="textposts"),
     path("text/read/<slug:slug>", views.selectedpost, name="post"),
 ]

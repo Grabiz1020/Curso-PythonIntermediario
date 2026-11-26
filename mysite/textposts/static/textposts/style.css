@@ -10,11 +10,10 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url(/media/images/site_assets/background.png);
-    background-repeat: no-repeat;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-size: auto;
+    background-size:cover;
     color: #333;
 
     min-height: 100vh;

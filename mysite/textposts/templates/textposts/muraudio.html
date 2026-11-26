@@ -1,0 +1,20 @@
+{% extends "textposts/base.html" %}
+
+{% block title %} Grabiz Gallery - Art {% endblock %}
+
+{% block content %}
+<h1>Audios</h1>
+<p>Alerta de som nesta página!<br>Não sou músico. Nunca toquei um intrumento na vida, mas eu mexo bastante com o DAWs (O Fl studio para ser mais específico). As músicas são numeradas a partir do quão novas são. Se eu refizer alguma música (acontece com frequência), ela vai ter outro dígito depois, como se fosse uma versão nova dela. Aproveite e sinta as vibes :)
+</p>
+<div class="dualcolumns">
+    
+    {% for myaudio in myaudios %}
+    <div class="slideup"  style="--i: {{ forloop.counter0 }}">
+        <h1>#{{ myaudio.idnumber }}</h1>
+        <h3>{{ myaudio.title }}</h3>
+        <audio controls src="{{ myaudio.audio.url }}"></audio>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

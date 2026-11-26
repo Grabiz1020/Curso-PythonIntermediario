@@ -21,6 +21,8 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse("reader:read", args=[self.slug])
 
+
+
 class MyImage(models.Model):
     image = models.ImageField(upload_to = 'images/art/')
     title = models.CharField("title",max_length=90)
@@ -41,5 +43,24 @@ class MyImage(models.Model):
     def get_absolute_url(self):
         return reverse("reader:read", args=[self.slug])
 
+
+class MyAudio(models.Model):
+    idnumber = models.FloatField("idnumber",max_length=90)
+    audio = models.FileField(upload_to = 'audio/modelaudio/')
+    title = models.CharField("title",max_length=90)
+    slug = models.SlugField(unique=True)
+    text = models.TextField()
+    visible = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ["idnumber"] # The "-" is to display the newer one to the oldest one.
+        verbose_name = "myaudio"
+        verbose_name_plural = "myaudios"
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse("reader:read", args=[self.slug])
 
 # Create your models here.
